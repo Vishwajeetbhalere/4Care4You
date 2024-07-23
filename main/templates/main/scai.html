@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+      }
+      
+      .imageBackground {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+      }
+      
+      .img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+      
+      nav {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+      }
+      
+      .content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: white;
+        padding-top: 10%;
+      }
+      
+      .text-container {
+        text-align: left;
+        padding-left: 20px;
+      }
+      
+      .text-container h1 {
+        font-size: 150px;
+      }
+      .text-container h3 {
+        font-size: 50px;
+      }
+      
+      .stick-image {
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="imageBackground">
+      {% include 'main/Navbar.html' %}
+      <img class="img" src="{% static 'images/scai_h.png' %}" alt="" />
+      <div class="container content">
+        <div class="row align-items-top">
+          <div class="col-md-6 text-center stick-image">
+            <img style="height: 700px;" class="img-fluid" src="{% static 'images/stick_no_bg.png' %}" alt="Smart Cane" />
+          </div>
+
+          <div style="color: black;" class="col-md-6 text-container">
+            <h1>SCAI</h1>
+            <h3>Smart Cane AI: Encouraging Mobility</h3>
+            <p>The Smart Cane AI (SCAI) is a revolutionary device designed to enhance the mobility and safety of visually impaired individuals. Unlike traditional canes that rely on tactile feedback, the SCAI leverages advanced sensors, artificial intelligence (AI), and communication technologies to provide users with a comprehensive understanding of their surroundings.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <div class="container mt-5">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="bi bi-broadcast-pin display-4 mb-3"></i>
+              <h5 class="card-title">Multi-Sensor System</h5>
+              <p class="card-text">Equipped with ultrasonic, infrared, and temperature sensors, the SCAI offers unparalleled environmental awareness. These sensors, integrated with the AI engine, provide real-time feedback on obstacles, potholes, and more.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="bi bi-cpu display-4 mb-3"></i>
+              <h5 class="card-title">Controller System</h5>
+              <p class="card-text">The SCAI implements a multi-controller system for efficient data processing. Dedicated controllers manage sensors, cameras, and data communication, ensuring optimal performance and responsiveness.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="bi bi-camera display-4 mb-3"></i>
+              <h5 class="card-title">High-Resolution PTZ Camera</h5>
+              <p class="card-text">Featuring a high-resolution PTZ camera, the SCAI captures detailed images of the user's surroundings. The AI engine analyzes these images to identify potential hazards, enhancing user safety.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="bi bi-geo-alt display-4 mb-3"></i>
+              <h5 class="card-title">GPS Tracking & Locator</h5>
+              <p class="card-text">With built-in GPS tracking, the SCAI allows users to share their location with caregivers or family members. Geofencing capabilities provide additional security by alerting users when they stray from their defined path.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="bi bi-wifi display-4 mb-3"></i>
+              <h5 class="card-title">IoT Communication Channels</h5>
+              <p class="card-text">The SCAI supports multiple communication channels, including 4G/5G, Wi-Fi, and Bluetooth. This connectivity enables seamless integration with other devices and services.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="bi bi-cpu-fill display-4 mb-3"></i>
+              <h5 class="card-title">Artificial Intelligence Engine</h5>
+              <p class="card-text">The AI engine processes sensor data and image inputs to provide detailed environmental analysis. It identifies obstacles and provides real-time feedback to users, enhancing their mobility and safety.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="bi bi-phone display-4 mb-3"></i>
+              <h5 class="card-title">Mobile Application</h5>
+              <p class="card-text">The SCAI's mobile application provides users with audible feedback based on the AI engine's analysis. It serves as a crucial interface between the user and the device, ensuring a seamless user experience.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="bi bi-braille display-4 mb-3"></i>
+              <h5 class="card-title">Smart Braille Buttons</h5>
+              <p class="card-text">In addition to audio alerts, the SCAI features smart Braille buttons for tactile feedback. These buttons serve as secondary alerts, ensuring that users are aware of their surroundings.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="bi bi-hdd-network display-4 mb-3"></i>
+              <h5 class="card-title">Server Application</h5>
+              <p class="card-text">The central server application manages data processing and communication for the SCAI system. It enables traceability of devices and users, enhancing overall system security and accountability.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="bi bi-hdd-network display-4 mb-3"></i>
+              <h5 class="card-title">Facial Recognition</h5>
+              <p class="card-text">SCAI uses AI techniques to distinguish between male or a female and also has facial recognition capability for stored images.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br />
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card border-0">
+            <img style="height: 475px; width: 600px; margin-left: 80px;" src="{% static 'images/1.png' %}" class="card-img-top img-fluid" alt="Red Electric Wheelchair" />
+            <div class="card-body"></div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card border-0">
+            <img style="height: 475px; width: 450px;margin-left: 30px;" src="{% static 'images/2.png' %}" class="card-img-top img-fluid" alt="Green Electric Wheelchair" />
+            <div class="card-body"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card border-0">
+            <img style="height: 475px; width: 600px; margin-left: 80px;" src="{% static 'images/3.png' %}" class="card-img-top img-fluid" alt="Red Electric Wheelchair" />
+            <div class="card-body"></div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card border-0">
+            <img style="height: 475px; width: 450px;margin-left: 30px;" src="{% static 'images/4.png' %}" class="card-img-top img-fluid" alt="Green Electric Wheelchair" />
+            <div class="card-body"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br />
+
+    <div class="ourApproach">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col text-center">
+            <h1 class="mb-4">Our Approach</h1>
+            <p style="font-size: 22px;">The Smart Cane Al represents a significant advancement in mobility assistance technology. With its innovative features and user-centric design, the SCAI is poised to revolutionise the lives of visually impaired individuals worldwide.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br /><br />
+    {% include 'main/footer.html' %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

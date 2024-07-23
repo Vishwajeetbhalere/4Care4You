@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .imageBackground {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: white;
+            padding-top: 20%;
+        }
+
+        .OMV,
+        .RegainYour,
+        .intrestedInProduct {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        .RegainYour p {
+            font-size: 20px;
+        }
+
+        .mission-contentt p {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .intrestedInProduct {
+            margin-left: 8vh;
+            margin-right: 8vh;
+        }
+
+        .intrestedInProduct .container {
+            background-color: #f4f4f4;
+            border-radius: 16px;
+            padding: 40px 40px;
+        }
+
+        .container-fluid {
+            border-radius: 16px;
+        }
+
+        .feature-img {
+            max-width: 100%;
+            height: auto;
+            background-color: #f8f9fa;
+        }
+
+        .read-more-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 5px 15px;
+            font-size: 14px;
+        }
+
+        .ourApproach {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        .ourApproach .container {
+            background-color: #f4f4f4;
+            border-radius: 16px;
+            padding: 40px 40px;
+        }
+
+        .card {
+            border: none;
+            box-shadow: none;
+        }
+        .hero-title {
+            font-size: 2.5rem;
+            margin-top: 2cm; /* This moves the title down by 2cm */
+            margin-bottom: 20px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="imageBackground">
+        {% include 'main/Navbar.html' %}
+        {% comment %} <img class="img" src="{% static 'images/home_bg.png'%}" alt=""> {% endcomment %}
+        <img class="img" src="https://framerusercontent.com/images/pzCZTZo2l7SnPeyLj7gwLU24o.jpg" alt="">
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Touch the Horizon with</h1>
+        </div>
+    </section>
+        <div class="content">
+        </div>
+    </div>
+
+    <div class="OMV">
+        <div class="container mission-values">
+            <h2 class="text-center">Our Mission & Values</h2><br>
+            <div class="row">
+                <div class="mission-contentt">
+                    <p>Our mission is to create solutions that will make people's lives easier. Our company's purpose is
+                        to provide best-in-class products that allow our customers to live a better and easier life in
+                        order to become contributing members of our community. Our core values include contributing positively
+                        to our communities and to our environment by applying higher standards of excellence to the
+                        purchasing and develop satisfied customers all the time with care and enthusiasm.</p>
+                    <p>
+                        We are launching our products ISPIN (Smart Wheelchair) and SCAI (Smart Cane) with unparalleled
+                        features and utilising the latest technology advances. Both these products have been designed
+                        with the philosophy of keeping the cost down while delivering the maximum benefits to the user. 
+                        Besides the technology both products adhere to WHO guidelines and also exceeding the WHO features.
+                        Realising our unique product offering we have file the Patents for both of our products.
+                    </p>
+                    <p>
+                        We truly believe that using these, products the user will achieve the mobility, self-reliance
+                        and independence much sought after. Our customer focus approach pushes us for relentless pursuit of
+                        excellence.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="RegainYour">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="display-4 mb-4">Regain your Mobility with our ISPIN & SCAI</h1>
+                    <button class="btn btn-outline-dark mb-4">DOWNLOAD BROCHURE</button>
+                    <div class="card mb-4">
+                        <img src="{% static 'images/chair.png'%}" class="card-img-top" alt="Electric wheelchair">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img src="{% static 'images/stick_image.png'%}" class="card-img-top" alt="Orange handle">
+                    </div>
+                    <p class="mt-4">
+                        We are a strategic manufacturing partner that has successfully delivered innovative and
+                        effective solutions to our customers. With several years of experience and knowledge in product
+                        design, processing technology, coupled with our commitment to innovate, we collaborate with
+                        industries all over the world to overcome challenging manufacturing obstacles.
+                    </p>
+                    <p>
+                        Using our advanced manufacturing capabilities, we add value and inject efficiency throughout
+                        every stage of the manufacturing process, bringing designs to life with precision. Our partners
+                        further benefit from working with us as we act as their gateway to success and thereby
+                        accelerating their business goals
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Making Lives Easier</h1>
+        <p style="margin-right: 30%;" class="mb-5">
+            The Smart Wheelchair (SW) and Smart Cane AI (SCAI) enhance user safety and independence. The SW offers
+            advanced mobility and security, while the SCAI uses AI and sensors to help visually impaired individuals
+            navigate their surroundings, making lives easier.
+        </p><br><br><br><br>
+    </div>
+
+    <div class="intrestedInProduct">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="mb-4">Interested in our product?</h2>
+                </div>
+                <div class="col-md-8">
+                    <p class="mb-3">Get more information from our experts</p>
+                    <hr class="border-primary">
+                    <form class="d-flex mt-4">
+                        <input type="email" class="form-control me-2" placeholder="example@email.com" aria-label="Email">
+                        <button class="btn btn-dark" type="submit">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ourApproach">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="mb-4">Our Approach</h2>
+                </div>
+                <div class="col-md-4">
+                    <p class="mb-3">We obsessively ask "why not?", look for new ideas, and embrace innovation.</p>
+                    <hr class="border-primary">
+                    <p class="mb-3 mt-4">We collaborate internally and externally to deliver value to our customers.</p>
+                    <hr class="border-primary">
+                </div>
+                <div class="col-md-4">
+                    <p class="mb-3">The goal is to deliver compelling value to internal and external customers.</p>
+                    <hr class="border-primary">
+                    <p class="mb-3 mt-4">We keep an open-mind, learn, provide and receive feedback from each other.</p>
+                    <hr class="border-primary">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card border-0">
+                    <img style="height: 475px; width: 600px; margin-left: 80px;" src="{% static 'images/Chair 2.png' %}" class="card-img-top img-fluid"
+                        alt="Red Electric Wheelchair">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-0">
+                    <img style="height: 475px; width: 450px;margin-left: 30px;" src="{% static 'images/chair_side.png' %}" class="card-img-top img-fluid"
+                        alt="Green Electric Wheelchair">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <br><br><br>
+
+    {% include 'main/footer.html' %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

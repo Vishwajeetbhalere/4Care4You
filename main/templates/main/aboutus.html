@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VCare4You</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #f8f9fa;
+            border-radius: 50px;
+            padding: 10px 20px;
+        }
+        .navbar-brand img {
+            height: 30px;
+        }
+        .hero {
+            background-color: #e6f2ff;
+            padding: 50px 0;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .about-us, .team-member {
+            padding: 50px 0;
+        }
+        .team-member {
+            background-color: #f8f9fa;
+        }
+        .team-member:nth-child(even) {
+            background-color: #ffffff;
+        }
+        .footer {
+            background-color: #e6f2ff;
+            padding: 20px 0;
+        }
+        .footer img {
+            height: 50px;
+        }
+        .imageBackground {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            background: url('https://framerusercontent.com/images/UCbJUPRUR23bvk98P7K3FNnmOM.png?scale-down-to=2048') no-repeat center center/cover;
+        }
+        .wheelchair-image {
+            position: absolute;
+            top: 20%;
+            left: 5%;
+            z-index: 1;
+            width: 600px;
+            max-width: 50%;
+        }
+        
+        .content {
+            position: absolute;
+            top: 30%;
+            right: 15%;
+            z-index: 1;
+            color: white;
+            max-width: 45%;
+        }
+
+        
+        .product-title {
+            font-size: 6rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .product-subtitle {
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        .team-member h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="imageBackground">
+        {% include 'main/Navbar.html' %}
+
+        <img class="wheelchair-image"
+            src="https://framerusercontent.com/images/c3VeMUahix4suotQ1xrf3h9j3g.png"
+            alt="Wheelchair">
+
+        <div class="content">
+            <h2 class="product-subtitle">Touch the Horizon with</h2>
+            <h1 class="product-title">ISPIN & SCAI</h1>
+        </div>
+    </div>
+
+    <section class="about-us">
+        <div class="container">
+            <h2 class="text-center mb-5">About Us</h2>
+            <p>GSK Impex Inc. based in Toronto, from 2019 onwards has changed its focus from general trading to developing innovative medical products. Company has strong technology team that has an experience of delivering sustainable products.</p>
+            <p>Company has manufacturing in India and plans to start the same in US and Canada to cater to respective markets.</p>
+            <p>With technology bench strength and international business development experience the company has plans to become the leader in manufacturing of chosen medical equipment.</p>
+        </div>
+    </section>
+
+    <section class="team-member">
+        <div class="container">
+            <h3>Surya Karan Singh – Chairman</h3>
+            <p>Surya, from a very young age he has been striving to help and serve people and therefore he has been the driving force to navigate company vision from general trading to focusing on development of medical devices. During COVID-19 Surya has worked extensively helping the community, especially the individuals who were differently abled and visually impaired. Experiencing firsthand the challenges faced and dependency of such individuals on helping hand, Surya thought of developing products for such individuals at the same time manufacturing them in cost effective manner so that the products can reach the masses. Surya holds Bachelor's degree in Political Science</p>
+        </div>
+    </section>
+
+    <section class="team-member">
+        <div class="container">
+            <h3>Karanveer Singh – President and CFO</h3>
+            <p>Karanveer is an accomplished Canadian entrepreneur, a strategist and a successful businessman who has business interests across the globe. He is a seasoned traveller for his multidimensional businesses across the globe. He is held in high regards for his expertise in the metals, mining and various commodity trades for more than 3 decades and has expertise in managing all aspects be it sourcing, logistics and supply chain.</p>
+            <p>The expertise, knowledge and experience which he possesses ensures that best quality products at the most competitive prices are made available to all stakeholders.</p>
+            <p>He continuously strives towards creating value for all the respected business partners. His core values range from integrity, ethics, trust, understanding, and respect for clients, suppliers and financial institutions allow him to perform fairly, guided by a vision to be the major player in the focused geographical regions around the world.</p>
+        </div>
+    </section>
+
+    <section class="team-member">
+        <div class="container">
+            <h3>Ajit Singh Dhillon – Head Marketing North America</h3>
+            <p>Ajit Singh with his education in Mechanical Engineering had an opportunity to work at a prestigious facility like Naval Dockyard Mumbai. During his tenure there he also worked on merchant ships for over 14 years. Ajit Singh with his quest for wider experience moved to Canada where he worked for Marine division of Toronto Polica for 13 years. With over 25 years of experience under his belt, Ajit Singh is now is working with World Financial Group with a team of 24.</p>
+        </div>
+    </section>
+
+    <section class="team-member">
+        <div class="container">
+            <h3>Milind – CTO</h3>
+            <p>Milind has spent over 18 years in USA, working in Research and Development in Telecom, Information Technology and Healthcare sectors with companies like Verizon, Alcatel, Ericsson, GTE and OPTELECOM.</p>
+            <p>During his career path, Milind has developed several digital systems including hardware and software for multiple verticals such as US Armed forces, Transportation, and Telecom. Milind has also participated in various technology standards' groups held by Bellcore. Milind has won several Exceptional performance awards during his tenure with various employers.</p>
+            <p>Milind holds US patents in the field of Mid-Trigger Call Processing and Multi-dimensional call reporting system and also, he is a recipient of several Superior Performance Awards in US.</p>
+            <p>In 2009 Milind has successfully launched ITS in India. The company focuses on developing self-service kiosk system. Within ITS, Milind has also performed the role of CTO and navigated the company to develop products for Banking, Transportation, Healthcare, Retail, and Identity Management. The products supported domestic as well as international customers such as Vodafone, Airtel, Indian Railways, Idea, VFS Global, AB Pay (UAE), BFC (Bahrain).</p>
+            <p>He has done his Bachelor's degree in Engineering from University of Mumbai, Master's degree in Electrical Engineering from University of Wyoming and Master's Degree in Computer Science from Johns Hopkins University.</p>
+        </div>
+    </section>
+
+    <br><br><br>
+    {% include "main/footer.html" %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

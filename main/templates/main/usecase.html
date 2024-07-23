@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Case</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Existing Styles */
+        .navbar {
+            background-color: #fbf7f7;
+            margin-top: 20px;
+            border-radius: 60px;
+        }
+
+        .container-fluid {
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        .navbar-nav>li {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .nav-item a {
+            padding: 12px 12px;
+            color: rgb(138, 121, 121);
+            font-size: large;
+        }
+
+        .nav-item a:hover {
+            background-color: rgb(241, 239, 234);
+            border-radius: 12px;
+        }
+
+        .nav-link.active {
+            font-size: larger;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .imageBackground {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            background: url('https://framerusercontent.com/images/UCbJUPRUR23bvk98P7K3FNnmOM.png?scale-down-to=2048') no-repeat center center/cover;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.8);
+            color: black;
+        }
+
+        .content {
+            position: absolute;
+            top: 30%;
+            right: 15%;
+            z-index: 1;
+            color: white;
+            max-width: 45%;
+        }
+
+        .product-title {
+            font-size: 6rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .product-subtitle {
+            font-size: 3rem;
+            text-align: center;
+        }
+
+      
+
+        .wheelchair-image {
+            position: absolute;
+            top: 20%;
+            left: 5%;
+            z-index: 1;
+            width: 600px;
+            max-width: 50%;
+        }
+
+
+        /* two image */
+
+        .container {
+  width: 80%;
+  margin: 50px auto 0; /* Top margin of 50px, centered horizontally */
+  font-family: Arial, sans-serif;
+}
+
+.content-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px; /* Space between the divs */
+}
+
+.content-box.reverse {
+  flex-direction: row-reverse;
+}
+
+.text-content {
+  flex: 1;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.image-content {
+  flex: 1;
+  padding: 20px;
+  
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 30px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .content-box, .content-box.reverse {
+    flex-direction: column;
+  }
+  
+  .text-content, .image-content {
+    width: 100%;
+  }
+}
+
+/* info section */
+.info-section {
+  text-align: center;
+  margin-top: 50px;
+  padding: 30px;
+  font-size: 20px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+}
+
+.info-section p {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .info-section {
+    font-size: 18px;
+    padding: 20px;
+  }
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="imageBackground">
+        {% include 'main/Navbar.html' %}
+
+        <img class="wheelchair-image"
+            src="https://framerusercontent.com/images/c3VeMUahix4suotQ1xrf3h9j3g.png"
+            alt="Wheelchair">
+
+        <div class="content">
+            <h2 class="product-subtitle">Touch the Horizon with</h2>
+            <h1 class="product-title">ISPIN & SCAI</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content-box">
+          <div class="text-content">
+            <p>ISPIN and SCAI are user end products along with the mobile application and the central server application provides flexibility to users and extend the usability of the products.
+
+                Individuals who are differently abled may find it little difficult to navigate through busy public places such as hospitals, resorts, airports, railway stations, religious places, malls, camping grounds etc.  For example, a passenger arriving by flight can pre-request ISPIN service through a mobile application even before boarding the flight.  Upon arrival the chair shall be made available at the gate.  
+                
+                Individual thus shall not have to depend upon the service personnel to navigate him or her.  User gets his or her independence with the eco system developed by Vcare4you.</p>
+          </div>
+          <div class="image-content">
+            <img src="https://framerusercontent.com/images/OFr0Vo3hqyMfVHrJ8tCP37hLC8Y.png?scale-down-to=512" alt="Example image 1">
+          </div>
+        </div>
+        
+        <div class="content-box reverse">
+          <div class="text-content">
+            <p>Similarly, an individual ready to board the flight can approach parking island of ISPIN and avail the service.  Through the mobile application the user shall be able to locate the nearest ISPIN.  Some of the ISPIN models do have the luggage rack as an option.
+
+                Similarly, for other crowded places, similar services can be utilized.
+                
+                In B2B business model, service providers can by “White Label” product from us and provide services in respective markets. 
+                
+                We can provide L3 and L4 support to the service providers to maintain the SLA for their end users.
+                
+                ISPIN can be provided as a service model where as SCAI is more of an individually focused and personalized product.  </p>
+          </div>
+          <div class="image-content">
+            <img src="https://framerusercontent.com/images/4F1QQdYJJrIlhlFhxXY9tEdG6NQ.png?scale-down-to=512" alt="Example image 2">
+          </div>
+        </div>
+      </div>
+
+      <div class="info-section">
+        <p>
+          User can choose his or her SCAI usage route and SCAI shall provide navigational information in audio format.</p>
+        <p></p> Let us say user is visiting a place of interest and before actually starting the journey he or she can press the "Assist" button on the SCAI.  Service agent shall originate a call to the user and based on the request the agent shall customize the navigational pattern for the user.
+        </p>
+        <p>
+          Another use case for SCAI would be that the user may be at the hospital and the individual may call upon the service agent and get the customized navigational data set for him or her during the individuals visit at the hospital.
+        </p>
+        <p>
+          These use cases are valid worldwide.
+        </p>
+      </div>
+      <br><br><br>
+      {% include 'main/footer.html' %}
+
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            background-image: url('{% static "background.jpg" %}');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-wrapper {
+            flex: 1 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        .form-control,
+        .form-select {
+            margin-bottom: 15px;
+        }
+
+        .submit-btn {
+            background-color: #000;
+            color: #fff;
+            width: 100%;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #333;
+        }
+
+        .recaptcha {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .form-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        {% include 'main/Navbar.html' %}
+    </header>
+
+    <div class="content-wrapper">
+        <div class="form-container">
+            <form method="post" action="{% url 'contactus' %}">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="first_name" name="first_name">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-control" name="last_name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-label">Email ID</label>
+                        <input type="email" class="form-control" name="email">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Contact No.</label>
+                        <input type="tel" class="form-control" name="contact_no">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-label">City</label>
+                        <input type="text" class="form-control" name="city">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Country</label>
+                        <input type="text" class="form-control" name="country">
+                    </div>
+                </div>
+                <label class="form-label">Product interested in</label>
+                <select class="form-select" name="product_interested">
+                    <option selected>Select product</option>
+                    <option value="ISPIN">ISPIN</option>
+                    <option value="SCAI">SCAI</option>
+                    <option value="Both">Both</option>
+                </select>
+                <label class="form-label">Message (optional)</label>
+                <textarea class="form-control" rows="3" name="message"></textarea>
+                <div class="recaptcha">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="recaptcha" name="recaptcha">
+                        <label class="form-check-label" for="recaptcha">
+                            I'm not a robot
+                        </label>
+                        <img src="{% static 'recaptcha-logo.png' %}" alt="reCAPTCHA logo"
+                            style="float: right; height: 30px;">
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        {% include 'main/footer.html' %}
+    </footer>
+
+</body>
+
+</html>
